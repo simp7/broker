@@ -27,7 +27,7 @@ type BrokerInitParams[T any] struct {
 }
 
 func New[T any](params BrokerInitParams[T]) *Broker[T] {
-	bufferSize := 0
+	bufferSize := 10
 	if params.BufferSize == 0 {
 		bufferSize = params.BufferSize
 	}
